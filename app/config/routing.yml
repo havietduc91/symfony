@@ -1,0 +1,7 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+show:
+    path:     /show/{slug}
+    defaults: { _controller: 'AppBundle\Controller\BlogController::showAction', ignoreAuth: true }
