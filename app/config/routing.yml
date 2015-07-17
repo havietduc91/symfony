@@ -3,5 +3,13 @@ app:
     type:     annotation
 
 show:
-    path:     /show/{slug}
+    path:     /show/{id}
     defaults: { _controller: 'AppBundle\Controller\BlogController::showAction', ignoreAuth: true }
+
+slug:
+    path:     /slug/{slug}
+    defaults: { _controller: 'AppBundle\Controller\BlogController::slugAction', ignoreAuth: true }
+
+create_new:
+    path:     /new/create
+    defaults: { _controller: 'AppBundle\Controller\BlogController::createAction', ignoreAuth: true }
