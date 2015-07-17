@@ -2,7 +2,7 @@
 // src/AppBundle/Controller/BlogController.php
 namespace AppBundle\Controller;
 
-use AppBundle\Entity\News;
+use AppBundle\Entity\Model\News;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,7 +26,7 @@ class BlogController extends DefaultController
     {
 
         $news = $this->getDoctrine()
-            ->getRepository('AppBundle:News')
+            ->getRepository('AppBundle:Model:News')
             ->find($id);
 
         if (!$news) {

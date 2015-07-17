@@ -13,3 +13,7 @@ slug:
 create_new:
     path:     /new/create
     defaults: { _controller: 'AppBundle\Controller\BlogController::createAction', ignoreAuth: true }
+
+task_new:
+    path:     /task/new
+    defaults: { _controller: 'AppBundle\Controller\TaskController::newAction', ignoreAuth: true }
